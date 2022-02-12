@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>пенсия</title>
+</head>
+
+<body>
+
+  <form>
+    <input type="radio" name="sex" id="w" value="w">Женщина<br>
+
+    <input type="radio" name="sex" id="m" value="m">Мужчина<br>
+
+    <input type="number" name="age" id="age" value="a">Возраст<br>
+
+    <button type="button" onclick="calculate()">Подтвердить</button>
+  </form>
+
+
+  <script>
+
+
+    function calculate() {
+
+      let sex;
+
+      if (document.getElementById('w').checked) {
+        sex = "w";
+      }
+      else if (document.getElementById('m').checked) {
+        sex = "m"
+      }
+
+      let age = document.getElementById('age').value
+
+      const retirementWomen = 55; //пенсионный возраст женщин на Украине
+      const retirementMen = 60; //пенсионный возраст мужчин на Украине
+
+
+      let yearRemaining
+
+      if (sex == "m") {
+        //calculate for men
+        yearRemaining = retirementMen - age
+      } else if (sex == "w") {
+        //calculate for women
+        yearRemaining = retirementWomen - age
+
+      } else {
+        //aler - input right sex
+        alert("укажите пол")
+      }
+
+      alert("вам осталось до пенсии " + yearRemaining +" лет")
+
+    }
+
+  </script>
+</body>
+
+</html>

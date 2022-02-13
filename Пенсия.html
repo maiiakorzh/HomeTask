@@ -19,9 +19,7 @@
     <button type="button" onclick="calculate()">Подтвердить</button>
   </form>
 
-
   <script>
-
 
     function calculate() {
 
@@ -39,37 +37,27 @@
       const retirementWomen = 55; //пенсионный возраст женщин на Украине
       const retirementMen = 60; //пенсионный возраст мужчин на Украине
 
-
       let yearRemaining
 
       if (sex == "m") {
-        //calculate for men
         yearRemaining = retirementMen - age
       } else if (sex == "w") {
-        //calculate for women
         yearRemaining = retirementWomen - age
-
       } else {
-        //aler - input right sex
         alert("укажите пол")
       }
 
-
-
-      alert("вам осталось до пенсии " + yearRemaining +" лет")
+      alert("вам осталось до пенсии " + yearRemaining + " лет")
 
       const currentDate = new Date();
-
       const currentYear = currentDate.getFullYear();
 
-      console.log("currentYear - "+ currentYear)
+      console.log("currentYear - " + currentYear)
 
       const retirementYear = currentYear + yearRemaining;
 
-      alert("Вы выйдете на пенсию в " + retirementYear +" году")
-
+      alert("Вы выйдете на пенсию в " + retirementYear + " году")
     }
-
   </script>
 </body>
 

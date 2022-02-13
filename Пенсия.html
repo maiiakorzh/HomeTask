@@ -1,6 +1,7 @@
 <!DOCTYPE>
 <html>
 
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>пенсия</title>
@@ -53,7 +54,19 @@
         alert("укажите пол")
       }
 
+
+
       alert("вам осталось до пенсии " + yearRemaining +" лет")
+
+      const currentDate = new Date();
+
+      const currentYear = currentDate.getFullYear();
+
+      console.log("currentYear - "+ currentYear)
+
+      const retirementYear = currentYear + yearRemaining;
+
+      alert("Вы выйдете на пенсию в " + retirementYear +" году")
 
     }
 

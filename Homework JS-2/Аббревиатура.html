@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Аббревиатура</title>
+</head>
+
+<body>
+    <script>
+
+        let messageName = 'Введите фамилию';
+
+        let surname = prompt(messageName);
+        let name = prompt('Введите имя');
+        let patronymic = prompt("Введите отчество");
+
+
+        let abbr = abbreviation(surname, name, patronymic);
+
+        alert(abbr)
+
+
+
+
+        function abbreviation(surname, name, patronymic) {
+
+            return surname.charAt(0) + "." + name.charAt(0) + "." + patronymic.charAt(0)
+        }
+
+
+    </script>
+</body>
+
+</html>
